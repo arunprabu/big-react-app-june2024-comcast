@@ -1,7 +1,7 @@
 import MenuList from "./MenuList";
 
-// Functional Component with Anonymous Fn 
-const Footer = function() {
+// Functional Component with Anonymous Fn
+const Footer = function () {
   const copyrightYear = 2025;
 
   return (
@@ -11,6 +11,6 @@ const Footer = function() {
       <p>Copyright {copyrightYear} | Arun</p>
     </footer>
   );
-}
+};
 
 export default Footer;

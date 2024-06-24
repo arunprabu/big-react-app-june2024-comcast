@@ -9,6 +9,6 @@ import './index.css' // global css
 // App Component is rendered in div which has id root (in index.html)
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // <React.StrictMode>
-    <App />
+  <App />
   // </React.StrictMode>
 );

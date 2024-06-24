@@ -1,7 +1,8 @@
 import LatestShow from "../components/netflix/LatestShow";
+import RecommendedShowList from "../components/netflix/RecommendedShowList";
+import TrendingShowList from "../components/netflix/TrendingShowList";
 
 const NetflixPage = () => {
-
   // TODO: create an array of objects and pass it as props
   const latestShows = [
     {
@@ -55,8 +56,14 @@ const NetflixPage = () => {
       </div>
 
       <hr />
-      <h2>Trending Shows | States Demo</h2>
-      <div></div>
+      <h2>Trending Shows | States, Events Demo</h2>
+      <div>
+        <TrendingShowList />
+      </div>
+
+      <hr />
+      <h2>Recommended Shows | States, Events, Lists & Keys, Conditional Rendering Demo</h2>
+      <RecommendedShowList />
     </div>
   );
 };
