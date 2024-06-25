@@ -179,7 +179,7 @@ Core Concepts
 Hooks
   Rules of Hooks [DONE]
   useState [DONE]
-  useEffect
+  useEffect [DONE]
   useReducer
   useRef 
   useContext 
@@ -198,31 +198,33 @@ CR(UD) App
 CRUD 
 ====
   User Management 
-    Create User                         - CREATE 
+    Create User                         - Http Method: POST 
       localhost:5173/user-manager/add
 
-    List Users                          - READ 
+    List Users                          - Http Method: GET 
       localhost:5173/user-manager/
     
-    View User Details                   - READ 
+    View User Details                   - Http Method: GET 
       localhost:5173/user-manager/30
 
-    Update User Details                 - UPDATE 
+    Update User Details                 - Http Method: PUT / PATCH 
       localhost:5173/user-manager/30/edit
 
-    Delete User                         - DELETE
+    Delete User                         - Http Method: DELETE
       localhost:5173/user-manager/30/
   
   
 
-
+Forms in React 
+==============
+  1. Using just react (NOT RECOMMENDED)
+  2. Using Formik (OK)
+  3. USing React-hook-form (RECOMMENDED)
 
 URLs
 ---
   URL Param
   Query Param 
-
-
 
 
 
