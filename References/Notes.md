@@ -171,18 +171,59 @@ Sharing Data Between Components (a.k.a) Cross Component Communication
 Core Concepts
 ---
   Props     [DONE]
-  States    
-  Events    
-  Conditional Rendering 
-  Lists & Keys
+  States    [DONE]
+  Events    [DONE]
+  Conditional Rendering [DONE]
+  Lists & Keys [DONE]
 
-Styling in React JS
+Hooks
+  Rules of Hooks [DONE]
+  useState [DONE]
+  useEffect
+  useReducer
+  useRef 
+  useContext 
+
+  Custom Hook 
+
+Styles
+  1. External Styles [DONE]
+  2. Internal Styles [DONE]
+  3. Inline Styles [DONE]
 
 
-React Hooks 
-==========
-  * Rules 
-  * 
+CR(UD) App 
+=====
+
+CRUD 
+====
+  User Management 
+    Create User                         - CREATE 
+      localhost:5173/user-manager/add
+
+    List Users                          - READ 
+      localhost:5173/user-manager/
+    
+    View User Details                   - READ 
+      localhost:5173/user-manager/30
+
+    Update User Details                 - UPDATE 
+      localhost:5173/user-manager/30/edit
+
+    Delete User                         - DELETE
+      localhost:5173/user-manager/30/
+  
+  
+
+
+
+URLs
+---
+  URL Param
+  Query Param 
+
+
+
 
 
 

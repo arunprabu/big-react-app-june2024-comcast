@@ -8,7 +8,6 @@ const TrendingShowList = () => {
     * whenever we update the state, the component re-renders to show the updates in UI
   */
   const [resolution, setResolution] = useState<string>("4K"); // initial State value
-
   const [shows] = useState<IVideo[]>([
     {
       id: 1,
