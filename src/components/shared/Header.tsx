@@ -4,10 +4,14 @@
   3. CSS (optional)
 */
 
+import { useContext } from "react";
 import MenuList from "./MenuList";
+import { CartContext } from "../../contexts/CartContext";
 
 // Functional Component with Named Function
 function Header() {
+  const { cartItems } = useContext<any>(CartContext);
+  console.log(cartItems);
   // must return JSX
   return (
     <header>
@@ -29,6 +33,7 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
+            <button className="btn btn-warning">Cart({cartItems.length})</button>
           </div>
         </div>
       </nav>

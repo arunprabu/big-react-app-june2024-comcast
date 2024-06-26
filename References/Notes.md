@@ -168,66 +168,6 @@ Sharing Data Between Components (a.k.a) Cross Component Communication
       3.2 Using Redux-Toolkit (or)
       3.3 Using Zustand (or) recoil, mobx, etc,..
 
-Core Concepts
----
-  Props     [DONE]
-  States    [DONE]
-  Events    [DONE]
-  Conditional Rendering [DONE]
-  Lists & Keys [DONE]
-
-Hooks
-  Rules of Hooks [DONE]
-  useState [DONE]
-  useEffect [DONE]
-  useReducer
-  useRef 
-  useContext 
-
-  Custom Hook 
-
-Styles
-  1. External Styles [DONE]
-  2. Internal Styles [DONE]
-  3. Inline Styles [DONE]
-
-
-CR(UD) App 
-=====
-
-CRUD 
-====
-  User Management 
-    Create User                         - Http Method: POST 
-      localhost:5173/user-manager/add
-
-    List Users                          - Http Method: GET 
-      localhost:5173/user-manager/
-    
-    View User Details                   - Http Method: GET 
-      localhost:5173/user-manager/30
-
-    Update User Details                 - Http Method: PUT / PATCH 
-      localhost:5173/user-manager/30/edit
-
-    Delete User                         - Http Method: DELETE
-      localhost:5173/user-manager/30/
-  
-  
-
-Forms in React 
-==============
-  1. Using just react (NOT RECOMMENDED)
-  2. Using Formik (OK)
-  3. USing React-hook-form (RECOMMENDED)
-
-URLs
----
-  URL Param
-  Query Param 
-
-
-
 
 Routing
 =========
@@ -282,3 +222,85 @@ Project Structure
       NetflixPage.tsx
 
     
+
+Core Concepts
+---
+  Props     [DONE]
+  States    [DONE]
+  Events    [DONE]
+  Conditional Rendering [DONE]
+  Lists & Keys [DONE]
+
+Hooks
+  Rules of Hooks [DONE]
+  useState [DONE]
+  useEffect [DONE]
+  useReducer
+  useRef 
+  useContext 
+
+  Custom Hook 
+
+Styles
+  1. External Styles [DONE]
+  2. Internal Styles [DONE]
+  3. Inline Styles [DONE]
+
+
+CR(UD) App 
+=====
+
+CRUD 
+====
+  User Management 
+    Create User                         - Http Method: POST 
+      localhost:5173/user-manager/add
+
+    List Users                          - Http Method: GET 
+      localhost:5173/user-manager/
+    
+    View User Details                   - Http Method: GET 
+      localhost:5173/user-manager/30
+
+    Update User Details                 - Http Method: PUT / PATCH 
+      localhost:5173/user-manager/30/edit
+
+    Delete User                         - Http Method: DELETE
+      localhost:5173/user-manager/30/
+  
+  
+
+Forms in React 
+==============
+  1. Using just react (NOT RECOMMENDED)
+  2. Using Formik (OK)
+  3. USing React-hook-form (RECOMMENDED) [DONE]
+
+URLs
+---
+  URL Param [DONE]
+  Query Param [TODO]
+
+======
+
+
+Products
+=====
+  Any to Any Component Communication 
+  useContext 
+  =========
+
+  Context API 
+  =======
+    Let's share the data across components 
+
+    step 1: create context 
+    Step 2: Identify the components that need to share and access the data (ProductsPage, Header)
+    Step 3: Provide data thru the context  to the list of components 
+    Step 4: Consume the data in the identified components (Header)
+
+
+Todo App 
+----
+  useReducer 
+  useRef 

@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
+
 const AboutPage = () => {
   const myStyles = { color: "black", backgroundColor: "lime" };
+  const data = useContext(CartContext);
+  console.log(data);
 
   return (
-    <div>
+    <>
       <h1>About Us</h1>
 
       <p style={{ color: "red", backgroundColor: "yellow" }}>
@@ -17,7 +22,7 @@ const AboutPage = () => {
 
       <p style={myStyles}>Demo of Internal Styles</p>
       <p style={myStyles}>You can reuse this....</p>
-    </div>
+    </>
   );
 };
 

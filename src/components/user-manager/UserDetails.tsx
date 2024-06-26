@@ -1,6 +1,28 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { IUser } from "../../models/IUser";
 
 const UserDetails = () => {
+  // Read the URL param and send the request to rest api
+  const { userId } = useParams();
+  const [user, setUser] = useState<IUser>();
+
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/" + userId)
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        console.log("It is over!");
+      });
+  }, []);
+  
   return (
     <div className="container">
       <div className="p-5 text-center bg-body-tertiary rounded-3">
@@ -18,12 +40,12 @@ const UserDetails = () => {
         <div className="col-5">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">John Doe</h5>
+              <h5 className="card-title">{user?.name}</h5>
               <h6 className="card-subtitle mb-2 text-body-secondary">
-                You are viewing the details of user id: 1
+                You are viewing the details of user id: {user?.id}
               </h6>
-              <p className="card-text">Phone: +91 1234567890</p>
-              <p className="card-text">Email: a@g.com</p>
+              <p className="card-text">Phone: {user?.phone}</p>
+              <p className="card-text">Email: {user?.email}</p>
               <button className="btn btn-primary">Edit</button>
               <button className="btn btn-outline-danger ms-2">Delete</button>
             </div>

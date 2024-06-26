@@ -31,12 +31,12 @@ const MenuList = () => {
     {
       id: 106,
       name: "About",
-      path: "/about",
+      path: "/about-us",
     },
     {
       id: 107,
       name: "Contact Us",
-      path: "/contact-us",
+      path: "/contact",
     },
   ];
 

@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { IUser } from "../models/IUser";
 
 const UserManagerPage = () => {
   const [isLoading, setIsLoading] = useState(true);  //loading state
-  const [users, setUsers] = useState<any[]>([]); // positive state
+  const [users, setUsers] = useState<IUser[]>([]); // positive state
   const [isError, setIsError] = useState(false); // negative state
 
   // useEffect will be called after initial UI Rendering
