@@ -4,13 +4,12 @@
   3. CSS (optional)
 */
 
-import { useContext } from "react";
 import MenuList from "./MenuList";
-import { CartContext } from "../../contexts/CartContext";
+import { useCart } from "../../contexts/CartContext";
 
 // Functional Component with Named Function
 function Header() {
-  const { cartItems } = useContext<any>(CartContext);
+  const { cartItems } = useCart()
   console.log(cartItems);
   // must return JSX
   return (

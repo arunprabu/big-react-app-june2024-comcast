@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { IProduct } from "../models/IProduct";
-import { CartContext } from "../contexts/CartContext";
+import {  useCart } from "../contexts/CartContext";
 
 const ProductsPage = () => {
-  const { addToCart } = useContext<any>(CartContext);
+  const { addToCart } = useCart()
   console.log(addToCart);
 
   const [products] = useState<IProduct[]>([

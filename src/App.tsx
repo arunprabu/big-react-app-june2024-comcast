@@ -6,16 +6,9 @@
 import "./App.css";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
-import HomePage from "./pages/HomePage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NetflixPage from "./pages/NetflixPage";
-import UserManagerPage from "./pages/UserManagerPage";
-import AboutPage from "./pages/AboutPage";
-import AddUser from "./components/user-manager/AddUser";
-import UserDetails from "./components/user-manager/UserDetails";
-import ProductsPage from "./pages/ProductsPage";
+import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
-import ContactPage from "./pages/ContactPage";
+import MainRoutes from "./routes/MainRoutes";
 
 function App() {
   // must return JSX
@@ -25,17 +18,7 @@ function App() {
         <Header></Header>
 
         <main className="container mt-5 pt-2">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/netflix" element={<NetflixPage />} />
-            <Route path="/user-manager" element={<UserManagerPage />} />
-            <Route path="/user-manager/add" element={<AddUser />} />
-            {/* URL param: userId */}
-            <Route path="/user-manager/:userId" element={<UserDetails />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/about-us" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <MainRoutes />
         </main>
       </CartProvider>
 

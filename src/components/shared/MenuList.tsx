@@ -38,6 +38,11 @@ const MenuList = () => {
       name: "Contact Us",
       path: "/contact",
     },
+    {
+      id: 108,
+      name: "Login",
+      path: "/auth/login",
+    },
   ];
 
   return (

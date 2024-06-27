@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { CartContext } from "../contexts/CartContext";
+import { useState } from "react";
 
 const AboutPage = () => {
   const myStyles = { color: "black", backgroundColor: "lime" };
-  const data = useContext(CartContext);
-  console.log(data);
+
+  const [myName, setMyName] = useState("arun");
 
   return (
     <>
@@ -22,6 +21,14 @@ const AboutPage = () => {
 
       <p style={myStyles}>Demo of Internal Styles</p>
       <p style={myStyles}>You can reuse this....</p>
+
+      {/* Controlled Component Example */}
+      <input
+        type="text"
+        className="form-control"
+        value={myName}
+        onChange={(event) => setMyName(event.target.value)}
+      />
     </>
   );
 };

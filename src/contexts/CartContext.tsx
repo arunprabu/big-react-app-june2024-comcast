@@ -2,7 +2,7 @@
 // Step 2: Identify the components that need to share and access the data (ProductsPage, Header)
 // Step 3: Provide data thru the context Provider to the list of components -- Refer App.tsx
 
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { IProduct } from "../models/IProduct";
 
 interface CartContextProps {
@@ -10,7 +10,7 @@ interface CartContextProps {
   addToCart: (product: IProduct) => void;
 }
 
-export const CartContext = createContext<CartContextProps | undefined>(
+const CartContext = createContext<CartContextProps | undefined>(
   undefined
 );
 
@@ -35,3 +35,16 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
+// custom hook 
+// it must have 'use' prefix. 
+export const useCart = () => {
+  const context = useContext<any>(CartContext);
+
+  if(!context) {
+    throw new Error(
+      "useCart must be used within CartProvider's descendents"
+    )
+  }
+
+  return context;
+}

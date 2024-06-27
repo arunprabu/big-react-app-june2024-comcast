@@ -237,7 +237,7 @@ Hooks
   useEffect [DONE]
   useReducer
   useRef 
-  useContext 
+  useContext [DONE]
 
   Custom Hook 
 
@@ -302,5 +302,17 @@ Products
 
 Todo App 
 ----
-  useReducer 
-  useRef 
+  useReducer [DONE]
+  useRef [DONE]
+
+
+Custom Hook 
+===========
+
+2 Ways to collect form data from react
+---
+  1. Controlled component approach (using useState) [DONE]
+      Instead of this try react-hook-form 
+  2. Uncontrolled component (using useRef ) [DONE]
+
+=========
