@@ -6,12 +6,13 @@
 
 import MenuList from "./MenuList";
 import { useCart } from "../../contexts/CartContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 // Functional Component with Named Function
 function Header() {
-  const { cartItems } = useCart()
-  console.log(cartItems);
-  // must return JSX
+  const { cartItems } = useCart();
+  const { onLogout } = useAuth();
+  
   return (
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -32,7 +33,13 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
-            <button className="btn btn-warning">Cart({cartItems.length})</button>
+            <button className="btn btn-secondary btn-sm" 
+              onClick={onLogout}>
+              Logout
+            </button>
+            <button className="btn btn-warning">
+              Cart({cartItems.length})
+            </button>
           </div>
         </div>
       </nav>

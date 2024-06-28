@@ -1,7 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const ProtectedRoutes = () => {
-  const isAuthenticated = true;
+  const { isAuthenticated } = useAuth();
 
   if(isAuthenticated) {
     console.log("logged in");

@@ -1,5 +1,4 @@
 // node_modules imports 
-import React from 'react' // core react library
 import ReactDOM from 'react-dom/client' // React package for working with the DOM.
 
 // custom imports

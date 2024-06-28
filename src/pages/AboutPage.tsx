@@ -1,13 +1,32 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
-  const myStyles = { color: "black", backgroundColor: "lime" };
+  const { t, i18n } = useTranslation();
 
+  const myStyles = { color: "black", backgroundColor: "lime" };
   const [myName, setMyName] = useState("arun");
+
+  const handleTranslate= (targetLanguage: string) => {
+    i18n.changeLanguage(targetLanguage);
+  }
 
   return (
     <>
-      <h1>About Us</h1>
+      <h1>{t("about.title")}</h1>
+      <p>{t("about.subtitle")}</p>
+
+      <button className="btn btn-primary" onClick={() => handleTranslate("fr")}>
+        Translate to French
+      </button>
+
+      <button className="btn btn-primary" onClick={() => handleTranslate("en")}>
+        Translate to English
+      </button>
+
+      <button className="btn btn-primary" onClick={() => handleTranslate("en-AU")}>
+        Translate to Australian English
+      </button>
 
       <p style={{ color: "red", backgroundColor: "yellow" }}>
         Demo of Inline Styles #1

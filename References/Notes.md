@@ -316,3 +316,85 @@ Custom Hook
   2. Uncontrolled component (using useRef ) [DONE]
 
 =========
+
+
+Authentication
+=====
+  2 Primary Types
+  =----
+    1. Session Based (old fashioned)
+        * post login,
+          * session id generated on the backend side and maintained in server side
+          * session id will be sent to the front end in cookies
+          * front end will automatically save the session id in cookies 
+          * back end will verify the session id in every http request
+
+    2. Token Based (modern)
+        * post login,
+          * JWT (Token) is generated on the backend side 
+          * JWT will be sent to the front end. 
+          * front end can save the JWT in cookies  / local storage / session storage
+          * back end will verify the JWT id in every http request
+
+    3. oauth 2
+    4. OTP Based authentication
+    5. magic link 
+    6. Touch Id
+
+
+
+===========
+
+ReactJS - Performace Tips
+--
+1. Use NPM package or any third party libraries only if absolutely needed.
+2. Most performance issues come in lists. So, think about having pagination.
+  Try this awesome package
+  https://bvaughn.github.io/react-virtualized/
+3. Make use of props wisely. Don't leave out unused props. 
+ 
+  So, a bad way could be...
+  const MyComp = (props) => { //bad way if all props are not used
+
+  }
+
+  but a better way to have props is here.. using object destructuring.
+  cont MyComp = ({ title, body, postId}){ // ignoring userId, if I don't display it anywhere
+
+  }
+  Also,don't pass unneccessary props. 
+
+4. Lazy Load Images 
+  https://www.npmjs.com/package/react-lazy-load-image-component
+5. Use profiler to record the app pages. And then check and fix the app. 
+6. Think about optimizing back end also. 
+7. Avoid having unnecessary tags, css. go with Fragment, <></>, 
+8. Don't bloat the page with too many components, 
+  because will have lifecycle hooks and will have re-rendering cycles.
+  If one parent comp updates, that will update child comp's till the last level.
+9. Use only functional components. 
+  Use hooks to stop child comp re-rendering. Remember useEffect, useCallback, useMemo
+10. Don't write too many inline styles. You should definitely avoid it inside loops.
+11. Don't write inline callbacks in loops. 
+    // bad 
+    <button onClick={() => deleteRecord()} >Delete</button> 
+    // good 
+    const deleteRecord = () =>{
+
+    }
+    <button onClick={deleteRecord} >Delete</button> 
+
+12. Learn more performance tips.. There are aplenty.
+
+===
+Debugging in Production
+---
+https://medium.com/@baphemot/intro-to-debugging-reactjs-applications-67cf7a50b3dd
+
+  
+
+
+
+
+
+
